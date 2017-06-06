@@ -3,6 +3,8 @@ package com.dl.commonviewpager.interfaces;
 import android.content.Context;
 import android.view.View;
 
+import java.util.List;
+
 /**
  * 给adapter提供布局和绑定数据
  * Created by dl on 2017/6/5.
@@ -22,5 +24,5 @@ public interface ViewPagerHolder<T> {
      * @param position
      * @param data
      */
-    void onBind(Context context,int position,T data);
+    void onBind(Context context,int position,T data,List<T> datas);
 }

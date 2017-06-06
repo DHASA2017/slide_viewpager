@@ -4,7 +4,6 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dl.commonviewpager.R;
 import com.dl.commonviewpager.interfaces.ViewPagerHolder;
 import com.dl.commonviewpager.interfaces.ViewPagerHolderCreator;
 
@@ -59,13 +58,15 @@ public class CommonViewPagerAdapter<T> extends PagerAdapter{
         if(view==null){
             holder = mCreator.crateViewHolder();
             view = holder.createView(container.getContext());
-            view.setTag(R.id.common_view_pager_item_tag,holder);
+            view.setTag(holder);
+//            view.setTag(R.id.common_view_pager_item_tag,holder);
         }else{
-            holder = (ViewPagerHolder) view.getTag(R.id.common_view_pager_item_tag);
+//            holder = (ViewPagerHolder) view.getTag(R.id.common_view_pager_item_tag);
+            holder = (ViewPagerHolder) view.getTag();
         }
         if(holder!=null&&mDatas!=null&&!mDatas.isEmpty()){
             //数据绑定
-            holder.onBind(container.getContext(),position,mDatas.get(position));
+            holder.onBind(container.getContext(),position,mDatas.get(position),mDatas);
         }
         return view;
     }
