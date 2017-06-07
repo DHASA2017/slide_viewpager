@@ -24,7 +24,7 @@ public class StatusBarUtils {
         //先设置的全屏模式
         setFullScreen(activity);
         //在透明状态栏的垂直下方放置一个和状态栏同样高宽的view
-//        addStatusBarBehind(activity,color,statusBarAlpha);
+        addStatusBarBehind(activity,color,statusBarAlpha);
     }
     /**
      * 添加了一个状态栏(实际上是个view)，放在了状态栏的垂直下方
