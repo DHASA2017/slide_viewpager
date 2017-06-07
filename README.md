@@ -8,4 +8,6 @@
 1、ViewPager和PagerAdapter知识基本介绍：
 http://blog.csdn.net/harvic880925/article/details/38453725
 2、自定义控件本示例中比较简单，可以理解下。
+3、inflate知识的讲解可以参考：
+http://www.jianshu.com/p/de7f651170be
 
